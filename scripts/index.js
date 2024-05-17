@@ -21,6 +21,15 @@ function generatePassword(length) {
 /**----------------------------------- */
 
 /**
+ * Stores the arrays to roll the random password.
+ */
+const arrays = {
+  lowercase: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
+  num: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+  symbols: ['#', '!', '$', '_', '-', '~', '+', '{', '}', '[', ']', '/', '\\', '@', '=', '^', '%', '*', ':', ';', ',', '?', '&', "'",]
+}
+
+/**
  * Retourne un élément aléatoire dans une liste donnée.
  *
  * @param {Array} list La liste dont un élément va être choisi
@@ -45,34 +54,7 @@ function randomInt(min, max) {
  * @returns Un charactère minuscule aléatoire.
  */
 function randomLowerCase() {
-  return arrayRandom([
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-    'g',
-    'h',
-    'i',
-    'j',
-    'k',
-    'l',
-    'm',
-    'n',
-    'o',
-    'p',
-    'q',
-    'r',
-    's',
-    't',
-    'u',
-    'v',
-    'w',
-    'x',
-    'y',
-    'z',
-  ]);
+  return arrayRandom(arrays.lowercase);
 }
 
 /**
@@ -86,39 +68,14 @@ function randomUpperCase() {
  * @returns Un charactère numérique aléatoire.
  */
 function randomNumber() {
-  return arrayRandom(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']);
+  return arrayRandom(arrays.num);
 }
 
 /**
  * @returns Un symbole ASCII aléatoire.
  */
 function randomSymbol() {
-  return arrayRandom([
-    '#',
-    '!',
-    '$',
-    '_',
-    '-',
-    '~',
-    '+',
-    '{',
-    '}',
-    '[',
-    ']',
-    '/',
-    '\\',
-    '@',
-    '=',
-    '^',
-    '%',
-    '*',
-    ':',
-    ';',
-    ',',
-    '?',
-    '&',
-    "'",
-  ]);
+  return arrayRandom(arrays.symbols);
 }
 
 /**
