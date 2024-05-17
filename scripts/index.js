@@ -1,9 +1,9 @@
 /**
- * Génère et retourne un mots de passe.
+ * Génère et retourne un mot de passe.
  *
  * Il est à vous de faire fonctionner cette fonctions.
  *
- * @param {number} length La taille que doit faire le mots de passe.
+ * @param {number} length La taille que doit faire le mot de passe.
  * @returns Un mot de passe sécurisé
  */
 function generatePassword(length) {
